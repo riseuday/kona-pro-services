@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kona Pro Services - Premium Holiday Lighting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-amber-500/10 p-2 rounded-xl border border-amber-500/20 text-amber-400">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">kona-pro-services</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-amber-400 transition-colors">Services</a>
+                <a href="#calculator" class="hover:text-amber-400 transition-colors">Estimate</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+19145729124" class="hidden sm:flex items-center gap-2 text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 px-4 py-2 rounded-lg border border-amber-500/20 font-medium transition-all text-sm">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+1 914-572-9124</span>
+                </a>
+                <a href="#calculator" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-amber-500/20 text-sm">
+                    Get Free Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Hero Carousel -->
+    <section class="relative overflow-hidden h-[60vh] min-h-[450px] lg:h-[75vh] flex items-center justify-center bg-slate-950">
+        <!-- Carousel Slides -->
+        <div id="carousel-slides" class="absolute inset-0 z-0">
+            <!-- Slide 1 -->
+            <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo1.jpg');">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo2.jpg');">
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo3.jpg');">
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo4.jpg');">
+            </div>
+            <!-- Slide 5 -->
+            <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo5.jpg');">
+            </div>
+            <!-- Slide 6 -->
+            <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('photo6.jpg');">
+            </div>
+        </div>
+
+        <!-- Gentle gradient overlay for contrast with UI buttons -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30 pointer-events-none"></div>
+
+        <!-- Carousel Navigation Controls -->
+        <button onclick="prevSlide()" class="absolute left-6 z-20 p-3 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white border border-slate-700/50 backdrop-blur-md transition-all shadow-xl">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-6 z-20 p-3 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white border border-slate-700/50 backdrop-blur-md transition-all shadow-xl">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+
+        <!-- CTA Action Floating Button -->
+        <div class="absolute bottom-16 z-20 text-center">
+            <a href="#calculator" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-2xl shadow-amber-500/30 transition-all text-base border border-amber-400">
+                <span>Calculate Instant Quote</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            <button onclick="goToSlide(0)" class="indicator-dot w-3 h-3 rounded-full bg-amber-500 transition-all"></button>
+            <button onclick="goToSlide(1)" class="indicator-dot w-3 h-3 rounded-full bg-slate-600 transition-all"></button>
+            <button onclick="goToSlide(2)" class="indicator-dot w-3 h-3 rounded-full bg-slate-600 transition-all"></button>
+            <button onclick="goToSlide(3)" class="indicator-dot w-3 h-3 rounded-full bg-slate-600 transition-all"></button>
+            <button onclick="goToSlide(4)" class="indicator-dot w-3 h-3 rounded-full bg-slate-600 transition-all"></button>
+            <button onclick="goToSlide(5)" class="indicator-dot w-3 h-3 rounded-full bg-slate-600 transition-all"></button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Our Holiday Lighting Services</h2>
+                <p class="text-slate-400">Everything needed for a brilliant, stress-free holiday display.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/30 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Custom Roofline Lighting</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Custom-cut, ultra-bright LED lighting tailored specifically to your home's rooflines, gutters, and architectural peaks.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/30 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+                        <i data-lucide="trees" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Tree & Shrub Wrapping</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Warm, elegant light wrapping for trunk and canopy accentuation, bushes, and garden features.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/30 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Full Service Guarantee</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Includes custom installation, season-long bulb maintenance support, post-holiday removal, and organized off-season storage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 text-center">Instant Holiday Light Estimator</h2>
+                <p class="text-slate-400 text-center mb-8 text-sm sm:text-base">Get an instant estimated range for your home display in seconds.</p>
+
+                <div class="space-y-8">
+                    <!-- Home Stories -->
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-3">Home Story Count</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button id="story-1" onclick="setStories(1)" class="p-4 rounded-xl border-2 border-amber-500 bg-amber-500/10 text-amber-400 font-semibold flex items-center justify-center gap-2">
+                                <i data-lucide="home" class="w-5 h-5"></i> 1-Story Home
+                            </button>
+                            <button id="story-2" onclick="setStories(2)" class="p-4 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 font-semibold flex items-center justify-center gap-2">
+                                <i data-lucide="building" class="w-5 h-5"></i> 2+ Story Home
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Linear Footage Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-medium text-slate-300">Estimated Roofline (Linear Feet)</label>
+                            <span id="feet-val" class="text-amber-400 font-bold text-lg">120 ft</span>
+                        </div>
+                        <input type="range" id="footage-slider" min="50" max="350" step="10" value="120" oninput="updateEstimate()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span>50 ft</span>
+                            <span>200 ft</span>
+                            <span>350+ ft</span>
+                        </div>
+                    </div>
+
+                    <!-- Estimated Price Display -->
+                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-800 text-center">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Estimated Price Range</span>
+                        <div id="price-display" class="text-3xl sm:text-4xl font-extrabold text-amber-400 my-2">$420 - $540</div>
+                        <p class="text-xs text-slate-500">Includes custom installation, removal, and maintenance season-long.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead Form -->
+    <section id="contact" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Request Your Official Quote</h2>
+                <p class="text-slate-400">Send us your details and we'll reach back out promptly.</p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-xl">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We received your request.');">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Full Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Phone Number</label>
+                            <input type="tel" required placeholder="+1 914-572-9124" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Email Address</label>
+                        <input type="email" required placeholder="anwar.kona@hotmail.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Service Area / Notes</label>
+                        <textarea rows="3" placeholder="Tell us about your home setup or preferences..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl shadow-lg shadow-amber-500/20 transition-all text-base">
+                        Submit Quote Request
+                    </button>
+                </form>
+
+                <div class="mt-8 pt-8 border-t border-slate-800 grid sm:grid-cols-2 gap-4 text-center sm:text-left">
+                    <div class="flex items-center gap-3 justify-center sm:justify-start">
+                        <i data-lucide="mail" class="w-5 h-5 text-amber-400"></i>
+                        <span class="text-sm text-slate-300">anwar.kona@hotmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-3 justify-center sm:justify-start">
+                        <i data-lucide="phone" class="w-5 h-5 text-amber-400"></i>
+                        <span class="text-sm text-slate-300">+1 914-572-9124</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-xs text-slate-500">
+        <p>© 2026 kona-pro-services. All rights reserved. Premium Holiday Light Installation.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.indicator-dot');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            dots[currentSlide].classList.remove('bg-amber-500');
+            dots[currentSlide].classList.add('bg-slate-600');
+
+            currentSlide = (index + slides.length) % slides.length;
+
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+            dots[currentSlide].classList.remove('bg-slate-600');
+            dots[currentSlide].classList.add('bg-amber-500');
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        // Auto advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Estimator Logic
+        let stories = 1;
+
+        function setStories(count) {
+            stories = count;
+            const btn1 = document.getElementById('story-1');
+            const btn2 = document.getElementById('story-2');
+            
+            if (count === 1) {
+                btn1.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/10 text-amber-400 font-semibold flex items-center justify-center gap-2";
+                btn2.className = "p-4 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 font-semibold flex items-center justify-center gap-2";
+            } else {
+                btn2.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/10 text-amber-400 font-semibold flex items-center justify-center gap-2";
+                btn1.className = "p-4 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 font-semibold flex items-center justify-center gap-2";
+            }
+            updateEstimate();
+        }
+
+        function updateEstimate() {
+            const footage = parseInt(document.getElementById('footage-slider').value);
+            document.getElementById('feet-val').innerText = footage + ' ft';
+            
+            const baseRate = stories === 1 ? 3.5 : 4.5;
+            const low = Math.round(footage * baseRate);
+            const high = Math.round(low * 1.3);
+            
+            document.getElementById('price-display').innerText = '$' + low + ' - $' + high;
+        }
+    </script>
+</body>
+</html>
